@@ -8,7 +8,10 @@ const userInfoContainer = document.querySelector(".user-info-container");
 const errorContainer = document.querySelector("[data-errorContainer]");
 
 let currentTab = userTab;
-const API_KEY = "8331529ecdd21afcd076c22390c14a08";
+
+require('dotenv').config();
+const API_KEY = process.env.API_KEY;
+
 currentTab.classList.add("current-tab");
 getfromSessionStorage();
 
